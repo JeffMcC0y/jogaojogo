@@ -1,0 +1,248 @@
+*{ /*referente a todo a pagina*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Para todo body*/
+body *{
+    /*fonte a ser utilizada*/
+    font-family: 'Inter',  sans-serif;
+    /*Atura da linha*/
+    line-height: 160%;
+}
+
+/*Para todo materiais de CSS contido no body  */
+body{
+    /*incere uma imagem de fundo no site */
+    background-image: url(./assets/bg.jpg);
+    /*posiciona a imagem de fundo */
+    background-position: top center;
+    /*tamanho da imagem de fundo no site */
+    background-size: 100% auto;
+    /*não repete a imagem de fundo no site */
+    background-repeat: no-repeat;
+    /*incere uma cor no fundo no site */
+    background-color: #03060a;
+}
+
+/*Referente ao css do header*/
+header{
+    /*espasamento superior da imagem*/
+    padding-top: 32px;
+    
+    /*outra opção
+    margin-top: 32px;*/
+
+    /*tudo que tiver propriedade de texto recebera efeito
+    text-align: center;*/
+
+    /*calcula tamanho do cabeçalho*/
+    height: calc(120px + 32px);
+}
+
+/*referente as divs no header*/
+header div{
+    /*tamanho da div*/
+    width: 500px;
+    /*centraliza a imagem*/
+    margin: auto;
+    /*
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;  
+    padding: 4px; *//*preenchimento*/
+
+    /*transition: transform .3s; trabalha em conjunto com o rover*/
+
+    /*animação tempo de animação delei chama as propriedades da animação*/
+    animation: fromTop .3s .2s backwards;
+    
+}
+
+/*efeito de tranzição
+header div:hover{
+    transform: scale(1.1);
+}*/
+
+/*referente todas as imagens no header*/
+header div img{
+    /*tamanho da imagem usando a div como referencia*/
+    width: 100%;
+    /*ou tra opção para dar um tamanho para imagem
+    width: 120px;*/
+    border-radius: 5%;
+}
+
+/*Tudo contido no main  */
+main *{
+    /*coloca uma borda criando uma caixa*/
+    /*border: 1px solid red;*/
+}
+
+/*Para todo materiais de CSS contido no main  */
+main{
+    /*padroniza o tamnho em pixel LxA */
+    max-width: 580px;
+    /*caso a tela seja menor que o tamnho padrão dado por desenvolvedor,
+    o comando width deixara em um tamanho em % proporcional atela referente ao padrão dado anterior*/
+    width: 90%;  
+    /*  valor px (32px) refer a margem superior e inferior
+        "auto" referente as margens ao redor da caixa posicionando os obgestos referente a tela*/
+    margin: 32px auto; 
+    
+    /*espaço entre ascixas*/
+    display: grid; 
+    /*epsços entre caixa*/
+    gap: 24px;
+    
+    /* auternativa
+    display: flex;
+    flex-direction: coluna;
+    gap: 24;*/
+    /*cria uma margem acima para da uma ceprarada*/
+
+    /*margem emcima para todos no main
+    margin-top: 32px;*/
+}
+
+main section{
+    animation: fromBottom 1.5s .3s backwards;
+}
+
+/*referente a css no section*/
+section{
+    /*cor da fonte*/
+    color: white;
+    /*para criar efeito de sombra gradiente
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD, #E2D45C 100%);*/
+    /*preenche a borda para cima*/
+    padding-top: 4px;
+    /*para aredonda as bordas*/
+    border-radius: 10px;
+}
+
+/*referente as div dentro do section*/
+section div{
+    /*cor do defundo somente nas div*/
+    background-color: #12355b;
+    /*borda interna*/
+    padding: 32px;
+    padding-top: 24px;
+    /*aredondamento das boras*/
+    border-radius: 8px;
+
+    /*cria borda com uma unica cor*/
+    border-top: 4px solid red;
+}
+
+/*somente para o "h2" contido no section*/
+section h2{
+    /*dimenções para as letras na marcação h2*/
+    font-weight: 900; /*peso*/
+    font-size: 24px;    /*tamanho*/
+    letter-spacing: -0.47px; /*espaço entre as letras*/
+}
+
+/*somente para o "p" contido no section*/
+section p{
+    font-weight: 400; /*peso*/
+    font-size: 16px; /*tamanho*/
+    letter-spacing: -0.18; /*espaço entre as letras*/
+    color: #A1A1AA; /*cor da letra*/
+}
+
+/*referente a "ul" (lista desordenada)*/
+section ul{
+    /*tira as marcações da lista*/
+    list-style: none;
+    /*organiza as caixas em linha*/
+    display: flex;
+    /*quando a quantidade de ites utrapaça o limetes os iten criam uma novalinha em baixo na mesma caixa*/
+    flex-wrap: wrap;
+    /*espaços entre as caixas*/
+    gap: 16px;
+    /*margem superior*/
+    margin-top: 24px;
+}
+/*referente a li contida na il da section*/
+section ul li {
+    transition: transform .3s; /*trabalha em conjunto com o hover*/
+}
+/*efeito de tansição*/
+section ul li:hover{
+    transform: scale(1.1) 
+}
+
+/*referente a casse games list*/
+.rpg-list img {
+    /*largura da imagem*/
+    width: 115px;
+    /*bardas aredondados nas imagens*/
+    border-radius: 8px;
+}
+
+.boardGame-list img{
+    border-radius: 8px;
+    width: 150px;
+    border: 1px solid #443E54;
+}
+
+.support-list img{
+    border-radius: 20%;
+    width: 100px;
+    border: 1px solid #443E54;
+}
+
+.sponsors-list img{
+    border-radius: 8px;
+    width: 150px;
+    border: 1px solid #443E54;
+}
+
+/* Animation */
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .5s;
+}
+
+main section:nth-child(3){
+    animation-delay: 1s;
+}
+
+main section:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+main section:nth-child(5){
+    animation-delay: 2s;
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
