@@ -199,8 +199,9 @@ section ul li:hover{
 
 .sponsors-list img{
     border-radius: 8px;
-    width: 150px;
+    width: 250px;
     border: 1px solid #443E54;
+    
 }
 
 .sponsors02-list img{
